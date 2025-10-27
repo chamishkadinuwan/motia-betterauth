@@ -40,9 +40,13 @@
         "x": -432,
         "y": 864
       },
+      "steps/auth/resend-verification-email.step.ts": {
+        "x": 0,
+        "y": 460
+      },
       "steps/auth/register.step.ts": {
-        "x": 2,
-        "y": 488
+        "x": 0,
+        "y": 684
       },
       "steps/auth/logout.step.ts": {
         "x": -261,
@@ -52,13 +56,13 @@
         "x": -594,
         "y": 616
       },
-      "steps/auth/getverificationtoken.step.ts": {
-        "x": -79,
-        "y": 1187
-      },
       "steps/auth/forgot-password.step.ts": {
         "x": 908,
         "y": 542
+      },
+      "steps/auth/verify-email.step.ts": {
+        "x": 0,
+        "y": 1528
       }
     }
   }

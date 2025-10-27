@@ -17,11 +17,12 @@ declare module 'motia' {
     'GetSession': ApiRouteHandler<Record<string, unknown>, unknown, never>
     'SendPasswordResetEmail': EventHandler<never, never>
     'ResetPassword': ApiRouteHandler<Record<string, unknown>, unknown, never>
+    'ResendVerificationEmail': ApiRouteHandler<Record<string, unknown>, unknown, never>
     'UserRegistration': ApiRouteHandler<Record<string, unknown>, unknown, never>
     'UserLogout': ApiRouteHandler<Record<string, unknown>, unknown, never>
     'UserLogin': ApiRouteHandler<Record<string, unknown>, unknown, never>
-    'GetVerificationToken': ApiRouteHandler<Record<string, unknown>, unknown, never>
     'ForgotPasswordRequest': ApiRouteHandler<{ email: string }, unknown, never>
     'PrismaClientCheck': ApiRouteHandler<Record<string, unknown>, unknown, never>
+    'VerifyEmailPost': ApiRouteHandler<Record<string, unknown>, unknown, never>
   }
 }
