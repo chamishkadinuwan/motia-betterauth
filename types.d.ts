@@ -15,12 +15,12 @@ declare module 'motia' {
     'GetCurrentUser': ApiRouteHandler<Record<string, unknown>, unknown, never>
     'GetUserProfile': ApiRouteHandler<Record<string, unknown>, unknown, never>
     'GetSession': ApiRouteHandler<Record<string, unknown>, unknown, never>
-    'UserLogout': ApiRouteHandler<Record<string, unknown>, unknown, never>
-    'UserRegistration': ApiRouteHandler<Record<string, unknown>, unknown, never>
     'ResetPassword': ApiRouteHandler<Record<string, unknown>, unknown, never>
+    'UserRegistration': ApiRouteHandler<Record<string, unknown>, unknown, never>
+    'UserLogout': ApiRouteHandler<Record<string, unknown>, unknown, never>
     'UserLogin': ApiRouteHandler<Record<string, unknown>, unknown, never>
-    'ForgotPasswordRequest': ApiRouteHandler<Record<string, unknown>, unknown, never>
     'GetVerificationToken': ApiRouteHandler<Record<string, unknown>, unknown, never>
+    'ForgotPasswordRequest': ApiRouteHandler<{ email: string }, unknown, never>
     'PrismaClientCheck': ApiRouteHandler<Record<string, unknown>, unknown, never>
   }
 }

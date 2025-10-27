@@ -28,21 +28,33 @@
   {
     "id": "auth",
     "config": {
+      "steps/auth/session.step.ts": {
+        "x": -241,
+        "y": 151
+      },
       "steps/auth/logout.step.ts": {
         "x": 9,
         "y": 0
       },
-      "steps/auth/session.step.ts": {
-        "x": 9,
-        "y": 151
-      },
-      "steps/auth/login.step.ts": {
-        "x": 13,
-        "y": 453
-      },
       "steps/auth/register.step.ts": {
         "x": 0,
         "y": 453
+      },
+      "steps/auth/reset-password.step.ts": {
+        "x": -160,
+        "y": 817
+      },
+      "steps/auth/login.step.ts": {
+        "x": -594,
+        "y": 616
+      },
+      "steps/auth/getverificationtoken.step.ts": {
+        "x": 417,
+        "y": 103
+      },
+      "steps/auth/forgot-password.step.ts": {
+        "x": 500,
+        "y": 700
       }
     }
   }
