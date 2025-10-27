@@ -15,6 +15,7 @@ declare module 'motia' {
     'GetCurrentUser': ApiRouteHandler<Record<string, unknown>, unknown, never>
     'GetUserProfile': ApiRouteHandler<Record<string, unknown>, unknown, never>
     'GetSession': ApiRouteHandler<Record<string, unknown>, unknown, never>
+    'SendPasswordResetEmail': EventHandler<never, never>
     'ResetPassword': ApiRouteHandler<Record<string, unknown>, unknown, never>
     'UserRegistration': ApiRouteHandler<Record<string, unknown>, unknown, never>
     'UserLogout': ApiRouteHandler<Record<string, unknown>, unknown, never>

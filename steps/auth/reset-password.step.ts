@@ -1,7 +1,4 @@
-
-
-
-// In a Motia project, the Motia runtime automatically handles imports and logging.
+// chamishkadinuwan/motia-betterauth/motia-betterauth-8151fd6b162614c167d6ac5a4b8273c7f03dc0f9/steps/auth/reset-password.step.ts (Final Working Code)
 
 import { auth } from './../../lib/auth'; // Reuses the Better Auth configuration
 
@@ -12,14 +9,13 @@ export const config = {
   path: '/auth/reset-password', 
   method: 'POST',
   description: 'Verifies the reset token and updates the user password via Better Auth.',
-    emits: [],
-    flows: ['auth'],
+  emits: [],
+  flows: ['auth'],
 };
 
 // 2. Motia Step Handler
 export const handler = async (req: any, ctx: any) => {
   const { logger } = ctx;
-  // This expects the token from the email link and the new password from the frontend form.
   const { token, email, newPassword } = req.body; 
 
   if (!token || !email || !newPassword) {
@@ -31,7 +27,6 @@ export const handler = async (req: any, ctx: any) => {
 
   try {
     // Call the Better Auth API method to reset the password.
-    // Better Auth verifies the token, checks expiry, updates the password, and invalidates the token.
     await auth.api.resetPassword({
       body: { 
         token,
@@ -52,7 +47,7 @@ export const handler = async (req: any, ctx: any) => {
     let errorMessage = 'Password reset failed. The token is invalid, expired, or the user does not exist.';
     let status = 400;
 
-    // Better Auth error messages often contain key phrases indicating failure reasons
+    // Handle specific Better Auth errors for better client feedback
     if (error.message.includes('token expired')) {
       errorMessage = 'The reset link has expired. Please request a new one.';
     } else if (error.message.includes('token not found') || error.message.includes('invalid')) {

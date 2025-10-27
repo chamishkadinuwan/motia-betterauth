@@ -27,3 +27,7 @@ export const handler = async (req: any, ctx: any) => {
     }
   };
 };
+
+// DATABASE_URL="postgres://64c6167b9523d34f3be344894e0fc166799770b163df1c3e34097aa08aebc6d0:sk_tmUMMIHAaNxNoTlK3PP5M@db.prisma.io:5432/postgres?sslmode=require"
+// BETTER_AUTH_SECRET="l48rUGjJLbT67ZwyjQrDK1OCl35QDCVc"
+// BETTER_AUTH_URL="http://localhost:3000"
