@@ -28,13 +28,13 @@
   {
     "id": "auth",
     "config": {
+      "steps/auth/verify-email.step.ts": {
+        "x": -149,
+        "y": 1586
+      },
       "steps/auth/session.step.ts": {
         "x": -522,
         "y": 464
-      },
-      "steps/auth/send-password-reset-email.step.ts": {
-        "x": 944,
-        "y": 761
       },
       "steps/auth/reset-password.step.ts": {
         "x": -432,
@@ -57,12 +57,12 @@
         "y": 616
       },
       "steps/auth/forgot-password.step.ts": {
-        "x": 908,
-        "y": 542
+        "x": 261,
+        "y": 1312
       },
-      "steps/auth/verify-email.step.ts": {
-        "x": 0,
-        "y": 1528
+      "steps/auth/send-password-reset-email.step.ts": {
+        "x": 667,
+        "y": 1515
       }
     }
   }

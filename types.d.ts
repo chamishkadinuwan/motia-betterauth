@@ -14,15 +14,15 @@ declare module 'motia' {
   interface Handlers {
     'GetCurrentUser': ApiRouteHandler<Record<string, unknown>, unknown, never>
     'GetUserProfile': ApiRouteHandler<Record<string, unknown>, unknown, never>
+    'VerifyEmailPost': ApiRouteHandler<Record<string, unknown>, unknown, never>
     'GetSession': ApiRouteHandler<Record<string, unknown>, unknown, never>
-    'SendPasswordResetEmail': EventHandler<never, never>
     'ResetPassword': ApiRouteHandler<Record<string, unknown>, unknown, never>
     'ResendVerificationEmail': ApiRouteHandler<Record<string, unknown>, unknown, never>
     'UserRegistration': ApiRouteHandler<Record<string, unknown>, unknown, never>
     'UserLogout': ApiRouteHandler<Record<string, unknown>, unknown, never>
     'UserLogin': ApiRouteHandler<Record<string, unknown>, unknown, never>
-    'ForgotPasswordRequest': ApiRouteHandler<{ email: string }, unknown, never>
     'PrismaClientCheck': ApiRouteHandler<Record<string, unknown>, unknown, never>
-    'VerifyEmailPost': ApiRouteHandler<Record<string, unknown>, unknown, never>
+    'ForgotPasswordRequest': ApiRouteHandler<{ email: string }, unknown, { topic: 'ForgotPasswordRequested'; data: { email: string } }>
+    'SendPasswordResetEmail': EventHandler<{ email: string }, never>
   }
 }
